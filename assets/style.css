@@ -1,0 +1,454 @@
+h1,h2,h3,h4,h5,h6 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.8em;
+  position: relative;
+  padding: 0.25em 0;
+}
+
+h3 {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    position:  relative;        /* 位置調整 */
+    font-weight:  normal;       /* 文字の太さ調整 */
+    font-size: 24px;            /* 文字サイズ指定 */
+    background-color:  #000;    /* 背景色指定 */
+    color:  #fff;               /* 文字色指定 */
+    padding: 10px 0 10px 30px;  /* 余白指定 */
+    margin-top:  20px;       /* 周りの余白指定 */
+}
+
+h4 {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+h4:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+  background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+}
+
+p {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    line-height: 2;             /* 行間調整 */
+}
+ 
+h3:before {
+    content: '';                /* 空の要素を作る */
+    height: 110%;               /* 高さ指定 */
+    width: 3px;                 /* 幅指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left: 14px;                 /* 位置調整 */
+    top: -3px;                  /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    background-color:  #fff;    /* 背景色指定 */
+    transform: rotate(3deg);    /* 回転 */
+}
+h3:after {
+    content: '';                /* 空の要素を作る */
+    height: 116%;               /* 高さ指定 */
+    width: 3px;                 /* 幅指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left: 14px;                 /* 位置調整 */
+    top: -6px;                  /* 位置調整 */
+    margin:  auto;              /* 位置調整 */
+    background-color:  #fff;    /* 背景色指定 */
+    transform: rotate(-15deg);  /* 回転 */
+}
+
+tr {
+  border-bottom: 1px solid #fff;
+}
+
+dl,dt,dd {
+  margin: 0;
+}
+
+.start {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+.start p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 280px;
+}
+
+.spin-loading-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.spin-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-right:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.p-left:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to left, rgb(230, 90, 90), transparent);
+}
+
+.d-block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.slider .indicators {
+  bottom: 15%;
+  z-index: 999;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.wrap-caption {
+  margin:			10px 8px 10px 16px;
+  position:		relative;
+}
+.wrap-caption .caption {
+  font-size: 130%;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px 0;
+}
+.wrap-caption .mask {
+  width:			100%;
+  height:			100%;
+  position:		absolute;
+  top:			0;
+  left:			0;
+  opacity:		0;	/* 表示させない */
+  background-color:	rgba(0,0,0,0.4);
+  -webkit-transition:	all 0.6s ease;
+  transition:		all 0.6s ease;
+}
+.wrap-caption:hover .mask {
+  -webkit-transform:	rotate(360deg);
+  transform:		rotate(360deg);
+  opacity:		1;	/* ホバーで表示する */
+}
+
+.bx-wrapper {
+  box-shadow: none!important;
+  border: none!important;
+  background: none!important;
+  margin: 0 auto;
+}
+
+.pagetop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50px;
+  color: #fff;
+  transition: color 0.7s ease;
+  z-index:9999;
+}
+
+.pagetop:hover {
+  cursor: pointer;
+  color: #888
+}
+
+/* ボタンを光らせる */
+.btn-shine:before {
+  /*光るアニメーション用*/
+  animation: shine 3s ease-in-out infinite;/*数字を変更することで光る間隔が変更*/
+  background-color: #fff;
+  content: " ";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: -180px;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.reservation {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  transition: all 0.7s ease;
+  opacity: 0.5;
+  z-index: 999;
+}
+
+.reservation a {
+  height: 80px;
+  line-height: 80px;
+  font-size: 24px;
+  padding: 0 40px;
+}
+
+.reservation:hover {
+  opacity: 1;
+}
+
+.sr-reservation {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+/* header
+---------------------------------------------*/
+header {
+  background: #000;
+  padding-bottom: 20px;
+}
+
+.brand-logo {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.nav-wrapper ul li a:hover {
+  background: #fff;
+  color: #222;
+}
+
+.top-slider-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.nav-fixed {
+  position: fixed;
+  z-index: 10;
+  transition: all 1s ease;
+}
+
+/* footer
+---------------------------------------------*/
+.sns {
+  margin: 0 20px;
+}
+
+.twitter, .facebook, .instagram {
+  color: #fff;
+  transition: color 0.5s ease;
+}
+
+.twitter:hover {
+  color: #00acee;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.instagram:hover {
+  color: #d93177
+}
+
+.sr-btn-reservation {
+  display: flex;
+  margin:0;
+  padding:0;
+}
+
+.sr-btn-reservation li {
+  width: 50%;
+}
+
+/* top
+---------------------------------------------*/
+.menu-title {
+  width: 100%;
+  text-align: center;
+  padding: 10px!important;
+  background: rgba(0,0,0,0.8);
+  font-size: 15px!important;
+}
+
+.imgwrap {
+  overflow: hidden;
+}
+
+.imgwrap img {
+  display: block;
+  transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+.imgwrap img:hover {
+  transform: scale(1.1);	/*画像の拡大率*/
+  transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+.tbl-common01 {  
+  margin: 0 auto;
+  border: 1px solid #666666;
+  border-bottom: none;
+}
+
+.tbl-common01 dt {  
+  font-weight: bold;
+}
+
+.trim{
+  position: relative;
+  width: 100%;/*　トリミングしたい枠の幅（固定にしたい場合はサイズを入力）　*/
+  padding-top: 100%;/*　トリミングしたい枠の高さ（固定にしたい場合はサイズを入力）　*/
+  overflow: hidden;/*　画像が枠からはみ出た部分はトリミング（非表示）する　*/
+  margin: 10px auto;
+}
+.trim img{
+/* 画像を上下左右に中央配置する（絶対指定） */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* 画像の最大サイズは枠の1.5倍まで */
+  max-width: 150%;
+  max-height: 150%;
+}
+
+/* course
+-------------------------------------------------- */
+.sub-h2 {
+  position: relative;
+  padding-bottom: .5em;
+  border-bottom: 4px solid #ccc;
+}
+.sub-h2::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 20%;
+  height: 4px;
+  background-color: green;
+}
+
+/* スマホ
+-------------------------------------------------- */
+@media only screen and (max-width:768px) {
+  .tbl-common01 {
+      background-color: #666;
+  }
+  
+  .tbl-common01 dt,
+  .tbl-common01 dd {
+      padding: 8px 20px;
+  }
+  
+  .tbl-common01 dt {
+      float: none;
+      background-color: #222; /* 背景色を指定 */
+  }
+  
+  .tbl-common01 dd {
+
+  }
+}
+
+
+/* PC
+-------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .tbl-common01 {
+      background: #222 url(bg.png) repeat-y -150px 0; /* dlで背景画像をyリピートし、dtの背景色のように見せる。positionはdtの幅に応じて調整 */
+  }
+  
+  .tbl-common01 dt,
+  .tbl-common01 dd {
+      padding: 20px;
+  }
+  
+  .tbl-common01 dt {
+      clear: both;
+      float: left;
+      width: 35%; /* 幅を指定 */
+  }
+  
+  .tbl-common01 dd {
+      padding-left: 170px; /* dtの分、左にpaddingを取る */
+
+      border-bottom: 1px solid #666666;
+  }
+}
+
+/* animation key frame
+---------------------------------------------*/
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
